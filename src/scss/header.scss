@@ -1,0 +1,70 @@
+@import './variables';
+
+.nav {
+    color: $white;
+
+    @media(min-width: $tablet) {
+        display: flex;
+        justify-content: space-between;
+    }
+    .search {
+        display: flex;
+        height: 40px;
+    }
+    .search__wrapper {
+        background-color: $dark-gray-bg;
+        border-radius: 3px;
+        overflow: hidden;
+        .btn {
+            color: $light-gray;
+        }
+    }
+    .search__input {
+        display: block;
+        padding: 5px 10px;
+        border-radius: 2px;
+        color: $light-gray;
+        border: none;
+        background-color: $dark-gray-bg;
+    }
+}
+
+.ul {
+    display: flex;
+    padding-left: 0;
+}
+
+.li {
+    list-style: none;
+    background-color: $light-gray-bg;
+    border-radius: 3px;
+    margin-right: 10px;
+    padding: 0 10px;
+    cursor: pointer;
+
+    .btn-link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__degree, &__refresh {
+        height: 30px;
+        width: 30px;
+    }
+    &__degree--active {
+        background-color: $dark-gray-bg;
+    }
+    &__lang--value {
+        margin-right: 5px;
+    }
+}
+.select__lang {
+    display: block;
+    background-color: transparent;
+    height: 100%;
+    color: $white;
+    &--option {
+        display: block;
+        cursor: pointer;
+    }
+}

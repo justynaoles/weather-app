@@ -1,0 +1,5 @@
+import '../scss/_variables.scss'
+import '../scss/button.scss'
+import '../scss/header.scss'
+import '../scss/weather_data.scss'
+import '../scss/global.scss'

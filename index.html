@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Weather app</title>
+    <meta name="description" content="Simple Weatherapp">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<div class="container">
+    <header class="header">
+        <nav class="nav">
+            <ul class="ul">
+                <li class="li li__refresh">
+                    <a href="#" class="btn-link"><i class="fas fa-sync-alt"></i></a>
+                </li>
+                <li class="li">
+                    <div class="li__lang">
+                        <span class="li__lang--value">EN</span>
+                        <button type="button" class="btn"><i class="fas fa-chevron-down"></i></button>
+                    </div>
+                    <ul name="lang" class="select__lang">
+                        <li class="select__lang--option" data-langue="EN">EN</li>
+                        <li class="select__lang--option" data-langue="PL">PL</li>
+                    </ul>
+                </li>
+                <li class="li li__degree li__degree--active">
+                    <a href="#" class="btn-link">F</a>
+                </li>
+                <li class="li li__degree">
+                    <a href="#" class="btn-link">C</a>
+                </li>
+            </ul>
+            <div class="search">
+                <div class="search__wrapper flex">
+                    <input type="search" class="search__input">
+                    <button type="button" class="btn btn-center btn-voicesearch">
+                        <i class="fas fa-microphone"></i>
+                    </button>
+                    <button type="button" class="btn btn-search">Search</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="content">
+        <section class="weather-data">
+            <div class="weather-data__header">
+                <h2 class="weather-data__city">Minsk, Belarus</h2>
+                <p class="weather-data__time">
+                    <span class="weather-data__time--date">Mon 28 October</span>
+                    <span class="weather-data__time--hour">17:23:12</span>
+                </p>
+            </div>
+            <div class="weather-data__current">
+                <span class="weather-data__degree">10</span>
+                <div class="weather-data__details">
+                    <div class="weather-data__details--title">Overcast</div>
+                    <div class="weather-data__details--feellike">
+                        <span class="details--title">Feels like:</span>
+                        <span class="details--value">7</span>
+                    </div>
+                    <div class="weather-data__details--wind">
+                        <span class="details--title">Wind:</span>
+                        <span class="details--value">2 m/s</span>
+                    </div>
+                    <div class="weather-data__details--humidity">
+                        <span class="details--title">Humidity:</span>
+                        <span class="details--value">83%</span>
+                    </div>
+                </div>
+            </div>
+            <div class="weather-data__forecast">
+                <ul class="forecast__list">
+                    <li class="list__item">
+                        <span class="item__title">Tuesday</span>
+                        <span class="item__title">7</span>
+                    </li>
+                    <li class="list__item">
+                        <span class="item__title">Tuesday</span>
+                        <span class="item__title">7</span>
+                    </li>
+                    <li class="list__item">
+                        <span class="item__title">Tuesday</span>
+                        <span class="item__title">7</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </div>
+</div>
+<script src="https://kit.fontawesome.com/6e2276fbf4.js" crossorigin="anonymous"></script>
+<script src="dist/main.js"></script>
+</body>
+</html>
