@@ -10,16 +10,21 @@
     .search {
         display: flex;
         height: 40px;
-    }
-    .search__wrapper {
         background-color: $dark-gray-bg;
         border-radius: 3px;
         overflow: hidden;
+        @media(min-width: $desktop) {
+            width: 30%;
+        }
+    }
+    .search__wrapper {
+        flex-grow: 1;
         .btn {
             color: $light-gray;
         }
     }
     .search__input {
+        flex-grow: 1;
         display: block;
         padding: 5px 10px;
         border-radius: 2px;

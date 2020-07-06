@@ -1,0 +1,56 @@
+@import './variables';
+
+.content {
+
+    padding-top: 30px;
+    @media(min-width: $desktop) {
+        padding-top: 40px;
+        display: flex;
+    }
+}
+
+.map {
+    @media(min-width: $desktop) {
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        justify-items: end;
+    }
+
+    &__container {
+        position: relative;
+        padding-bottom: 100%;
+        background-color: lightgreen;
+        border-radius: 10px;
+        overflow: hidden;
+
+        @media(min-width: $tablet) {
+            padding-bottom: 0;
+            height: 600px;
+            width: 600px;
+        }
+        @media(min-width: $desktop) {
+            height: auto;
+            width: auto;
+            padding-bottom: 100%;
+        }
+    }
+    &__container--map {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+    }
+    &__coordinates {
+        padding-top: 10px;
+        max-width: 600px;
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 10px;
+    }
+    .coordinates__value {
+        padding-left: 20px;
+    }
+    .latitude {
+        padding-bottom: 5px;
+    }
+}
