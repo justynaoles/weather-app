@@ -5,4 +5,6 @@ import '../scss/button.scss'
 import '../scss/header.scss'
 import '../scss/weather_data.scss'
 
+//js
+import './countryList';
 import './weather';
