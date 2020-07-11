@@ -22,7 +22,7 @@ class WeatherApp {
   }
 
   getWeatherData(city) {
-    return fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=8c654c21b7cb72da0bd479fc3d3a7540`)
+    return fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=8c654c21b7cb72da0bd479fc3d3a7540`)
     .then(response => response.json())
     .then(data => {
      this.city = data.name;
