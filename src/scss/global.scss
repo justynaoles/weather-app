@@ -15,7 +15,9 @@ body {
     padding: 20px;
     max-width: 1500px;
     margin: 0 auto;
-  
+    background-image: url('/../../img/background/rainy/rainy.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 select {
