@@ -22,6 +22,7 @@ const currentDate = new Date();
 const currentDay = currentDate.getDay();
 let tempUnit = 'celsius';
 let bgImagesArray;
+const body = document.body;
 
 nextDaysList.map((day,index) => day.innerText = daysArray[index]);
 nextDaysListTemp.map((temp,index) => temp.innerText = tempsArray[index]);
@@ -47,6 +48,7 @@ export class WeatherApp {
       cityTemp.textContent = this.calculateTempUnits(data.main.temp, tempUnit);
 
       this.setWeatherDataNextDays(this.city);
+      this.getWeatherCode(this.city);
      } else {
        alert('ups, coś poszło nie tak...');
      }
@@ -70,6 +72,7 @@ export class WeatherApp {
 
       nextDaysListIcons.map((icon,index) => icon.src=`http://openweathermap.org/img/wn/${tempsNextDaysIconsArray[index]}@2x.png`)
       nextDaysListTemp.map((temp,index) => temp.innerText = tempsArray[index]);
+
     })
   }
 
@@ -114,8 +117,7 @@ export class WeatherApp {
      this.city = data.name;
      
      if(this.city) {
-       console.log(data.cod);
-        return setWeatherAppBg(data.code);
+        return this.setWeatherAppBg(data.cod);
      } else {
        alert('ups, coś poszło nie tak...');
      }
@@ -123,7 +125,34 @@ export class WeatherApp {
   }
 
   setWeatherAppBg(code) {
+    const weatherCode = code.toString().charAt(0);
 
+    let pictureType;
+
+    switch (weatherCode) {
+      case '2':
+        pictureType = 'thunderstorm';
+        break;
+      case '3':
+        pictureType = 'drizzle';
+        break;
+      case '5':
+        pictureType = 'rain';
+        break;
+      case '6':
+        pictureType = 'snow';
+        break;
+      case '7':
+        pictureType = 'atmosphere';
+        break;
+      case '8':
+        pictureType = 'clear';
+        break;
+      default:
+        pictureType = 'random';
+    }
+
+    return pictureType;
   }
 };
 
