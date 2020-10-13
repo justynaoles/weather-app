@@ -79,3 +79,50 @@ input[type="search"]::-webkit-search-results-decoration {
 .button {
   padding: 30px 50px;
 }
+
+.instagram {
+  background: rgb(153,0,33);
+  background: linear-gradient(180deg, rgba(153,0,33,1) 21%, rgba(182,0,36,1) 53%, rgba(153,0,33,1) 78%);
+  display: flex;
+  flex-flow: column;
+
+  &__link {
+    display: inline-block;
+    align-self: center;
+    position: relative
+  }
+  &__link--icon {
+    display: block;
+    position: relative;
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+    &:after, &:before {
+      content: '';
+      display: inline-block;
+      border-width: 15px 15px 0 0;
+      position: absolute;
+      top: 50%;
+      height: 50px;
+      width: 50px;
+      border-style: solid;
+      border-color: white;
+    }
+    &:before {
+      left: -120px;
+      top: 10px;
+	    transform: rotate(45deg) translateY(-50%);
+    }
+    &:after {
+      top: 0;
+      right: -120px;
+	    transform: rotate(220deg) translateY(-50%);
+    }
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}

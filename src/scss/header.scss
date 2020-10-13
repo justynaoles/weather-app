@@ -73,3 +73,48 @@
         cursor: pointer;
     }
 }
+
+.frame-lines .frame-title {
+    position: relative;
+    line-height: 1;
+    margin-top: 2em;
+    margin-bottom: 1.2em;
+    font-weight: 100;
+    font-size: 2.5rem;
+}
+.frame-lines span {
+    display: inline-block;
+}
+.frame-lines span {
+    display: inline-block;
+}
+
+.frame-lines .frame-line--fullLeft {
+    left: 75px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+}
+
+.frame-lines .frame-line::before, .frame-lines .frame-line::after {
+    background-color: #000;
+    content: '';
+    height: 1px;
+    display: inline-block;
+    position: absolute;
+    transform-origin: bottom left;
+}
+
+.frame-lines .frame-line--fullLeft::before {
+    top: -3px;
+    left: 11px;
+    transform: rotate(-63deg);
+    width: 75px;
+}
+
+.frame-lines .frame-line--fullLeft::after {
+    bottom: -2px;
+    left: -11px;
+    transform: rotate(117deg);
+    width: 50px;
+}
