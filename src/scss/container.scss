@@ -54,3 +54,97 @@
         padding-bottom: 5px;
     }
 }
+
+
+.carousel-item {
+    background-color: grey;
+}
+
+
+.my-slider {
+    background-color: yellow;
+}
+
+.slide {
+    background-color: green;
+}
+
+.slider1 {
+    background-color: hotpink;
+}
+.slider2 {
+    background-color: brown;
+}
+.slider3 {
+    background-color: peru;
+}
+.slider4 {
+    background-color: black;
+}
+
+.slider5 {
+    background-color: olive;
+}
+
+.slider6 {
+    background-color: gold;
+}
+
+.slider7 {
+    background-color: grey;
+}
+
+.slider-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn-prev, .btn-next {
+    background-color: transparent;
+    border: none;
+    width: 33px;
+
+    @media (min-width: 768px) {
+        width: 45px;
+    }
+}
+.slider-controllers {
+    background-color: yellow;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+
+    button {
+        width: 45px;
+        height: 2px;
+        background-color: black;
+        margin: 3px;
+    }
+}
+.customize-nav__item {
+
+    display: block;
+    width: 45px;
+    height: 2px;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    background-clip: padding-box;
+    background-color: black;
+    display: inline-block;
+    margin: 5px;
+    cursor: pointer;
+
+    &.tns-nav-active {
+        background-color: red;
+    }
+}
+
+.tns-outer [aria-controls], .tns-outer [data-action] {
+    width: 45px;
+    height: 2px;
+    background-color: black;
+    margin:3px;
+}

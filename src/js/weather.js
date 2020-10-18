@@ -163,3 +163,5 @@ searchCityBtn.addEventListener('click', function(){
 });
 
 weatherApp.getWeatherData('Kraków');
+
+
